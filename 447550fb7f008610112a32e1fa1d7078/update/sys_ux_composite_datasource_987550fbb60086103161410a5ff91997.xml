@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_datasource">
+    <sys_ux_composite_datasource action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_wdocapp_document_approval">active=true^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <encoded_query_script/>
+        <name>Document Approval Search</name>
+        <sort_by>sys_created_on</sort_by>
+        <sys_class_name>sys_ux_composite_datasource</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:38:43</sys_created_on>
+        <sys_id>987550fbb60086103161410a5ff91997</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Approval Search</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_ux_composite_datasource_987550fbb60086103161410a5ff91997</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:38:43</sys_updated_on>
+        <table>x_snc_wdocapp_document_approval</table>
+    </sys_ux_composite_datasource>
+</record_update>

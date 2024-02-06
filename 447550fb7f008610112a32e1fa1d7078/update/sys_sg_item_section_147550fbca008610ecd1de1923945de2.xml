@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_section">
+    <sys_sg_item_section action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <card_size/>
+        <column_count/>
+        <custom_height/>
+        <custom_width/>
+        <data_item/>
+        <destination_screen display_value="New Document Approvals">d87550fb230086104ca6edb6dbd678db</destination_screen>
+        <display_title>true</display_title>
+        <hide_header>false</hide_header>
+        <hide_section_if_empty>false</hide_section_if_empty>
+        <hide_see_all_button>false</hide_see_all_button>
+        <is_custom_size>false</is_custom_size>
+        <is_hidden_preference_name/>
+        <max_items_display_count>15</max_items_display_count>
+        <orientation>vertical</orientation>
+        <required_roles/>
+        <row_count/>
+        <scrolling_type/>
+        <sys_class_name>sys_sg_item_section</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:38:50</sys_created_on>
+        <sys_id>147550fbca008610ecd1de1923945de2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Document Approvals</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_sg_item_section_147550fbca008610ecd1de1923945de2</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:38:50</sys_updated_on>
+        <table/>
+        <title>New Document Approvals</title>
+        <visible_condition/>
+        <wide_column_count/>
+    </sys_sg_item_section>
+</record_update>

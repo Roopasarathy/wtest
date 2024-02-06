@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_composite_data_template_predicate">
+    <sys_ux_composite_data_template_predicate action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="v_search_genius_result">model=!!!sys_id_617!!!^EQ<item endquery="false" field="model" goto="false" newquery="false" operator="=" or="false" value="!!!sys_id_617!!!"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <custom_condition/>
+        <custom_field_list/>
+        <field_list>columns.var__m_sys_search_genius_result_field_!!!sys_id_617!!!.name,columns.var__m_sys_search_genius_result_field_!!!sys_id_617!!!.number,columns.var__m_sys_search_genius_result_field_!!!sys_id_617!!!.description,columns.var__m_sys_search_genius_result_field_!!!sys_id_617!!!.submitter,columns.var__m_sys_search_genius_result_field_!!!sys_id_617!!!.status,columns.var__m_sys_search_genius_result_field_!!!sys_id_617!!!.approval_category</field_list>
+        <name>Document Approval Genius Result</name>
+        <order>100</order>
+        <predicate_bundle display_value="Document Approval Search Bundle">507550fb4c008610d02d206d84d5a797</predicate_bundle>
+        <required_roles/>
+        <sys_class_name>sys_ux_composite_data_template_predicate</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:38:46</sys_created_on>
+        <sys_id>1c7550fb06008610b43abadc85ebf895</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Approval Genius Result</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_ux_composite_data_template_predicate_1c7550fb06008610b43abadc85ebf895</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:38:46</sys_updated_on>
+        <table>v_search_genius_result</table>
+        <ux_template display_value="Document Approval Genius Result">d87550fbaf008610e61d32e9423aeb96</ux_template>
+    </sys_ux_composite_data_template_predicate>
+</record_update>

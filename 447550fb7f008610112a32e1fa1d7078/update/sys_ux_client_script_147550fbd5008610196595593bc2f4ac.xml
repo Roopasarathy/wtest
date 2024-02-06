@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="doc_submitted">d47550fb300086100e07350caa0c71ac</macroponent>
+        <name>Refresh Doc List</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    api.emit('NAV_ITEM_SELECTED', {
+        route : "doc_landing",
+        params : {
+            refreshList : Date.now()
+        },
+        fields : {}
+    });
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:04</sys_created_on>
+        <sys_id>147550fbd5008610196595593bc2f4ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Refresh Doc List</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_ux_client_script_147550fbd5008610196595593bc2f4ac</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:04</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>

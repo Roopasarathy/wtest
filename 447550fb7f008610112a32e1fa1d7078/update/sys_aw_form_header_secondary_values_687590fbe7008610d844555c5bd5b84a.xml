@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aw_form_header_secondary_values">
+    <sys_aw_form_header_secondary_values action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions/>
+        <field>document.approval_category</field>
+        <form_header display_value="x_snc_wdocapp_document_approver">6c7590fb4d008610658494998969ce4c</form_header>
+        <order>400</order>
+        <roles/>
+        <sys_class_name>sys_aw_form_header_secondary_values</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:38:56</sys_created_on>
+        <sys_id>687590fbe7008610d844555c5bd5b84a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>document.approval_category</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_aw_form_header_secondary_values_687590fbe7008610d844555c5bd5b84a</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:38:56</sys_updated_on>
+    </sys_aw_form_header_secondary_values>
+</record_update>

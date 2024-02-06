@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="5c7550fbac008610d895630c750001c1" sys_domain="global" table="x_snc_wdocapp_document_approval" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>d07550fb740086109cc7ce74ca0cbbc2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>approval_category</element>
+            <position>1</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>147550fb08008610d1f04f94d7b4d3c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>2</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>987550fbbb008610faff7cf2fa79aac1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>107550fb18008610abab12b40b53d5c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>4</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>507550fb0d008610641cc6b8e3ef2bc1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <position>5</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>d47550fb8e0086103c445c815b1d5cc1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>submitter</element>
+            <position>6</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>547550fb14008610fd97f8049f764dc0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>7</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>907550fb3a008610f35406c5dfdc87c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>8</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>187550fb6a008610982ede5c8a70e4c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>9</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>9c7550fb75008610c773a189dbe3c0c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity.xml</element>
+            <position>10</position>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_id>d87550fb9a0086101359e3766c3c0fc0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wdocapp_document_approval" sys_domain="global" view="Default view">5c7550fbac008610d895630c750001c1</sys_ui_section>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_snc_wdocapp_document_approval</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:39:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5c7550fbac008610d895630c750001c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_wdocapp_document_approval</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+            <sys_update_name>sys_ui_section_5c7550fbac008610d895630c750001c1</sys_update_name>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:39:08</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

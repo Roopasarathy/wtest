@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority/>
+        <description>Change in state of document approval table</description>
+        <event_name>x_snc_wdocapp.notification_event</event_name>
+        <fired_by>Single Stage Approval Workflow for Document Approval</fired_by>
+        <priority/>
+        <queue/>
+        <suffix>notification_event</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:00</sys_created_on>
+        <sys_id>ec7590fbfd008610b2cd55a0063e094d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_wdocapp.notification_event</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sysevent_register_ec7590fbfd008610b2cd55a0063e094d</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:00</sys_updated_on>
+        <table/>
+    </sysevent_register>
+</record_update>

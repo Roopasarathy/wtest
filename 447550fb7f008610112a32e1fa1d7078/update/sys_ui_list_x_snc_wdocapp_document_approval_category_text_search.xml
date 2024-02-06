@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_snc_wdocapp_document_approval_category" version="2" view="text_search">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>name</element>
+            <list_id display_value="x_snc_wdocapp_document_approval_category" element="NULL" name="x_snc_wdocapp_document_approval_category" parent="NULL" relationship="NULL" sys_domain="global" view="0c029fc00a0a0b2c001aa3d4ed9f69e8">107550fb36008610041bcc566cd806ce</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:38:49</sys_created_on>
+            <sys_id>d07550fbac008610a2aa403774383cce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:38:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_snc_wdocapp_document_approval_category" element="NULL" name="x_snc_wdocapp_document_approval_category" parent="NULL" relationship="NULL" sys_domain="global" view="0c029fc00a0a0b2c001aa3d4ed9f69e8">107550fb36008610041bcc566cd806ce</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:38:49</sys_created_on>
+            <sys_id>d87550fbbe00861081cad469c9fc6bcc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:38:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>use_flow</element>
+            <list_id display_value="x_snc_wdocapp_document_approval_category" element="NULL" name="x_snc_wdocapp_document_approval_category" parent="NULL" relationship="NULL" sys_domain="global" view="0c029fc00a0a0b2c001aa3d4ed9f69e8">107550fb36008610041bcc566cd806ce</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:38:49</sys_created_on>
+            <sys_id>987550fb1b0086107fc00de247fad7cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:38:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>description</element>
+            <list_id display_value="x_snc_wdocapp_document_approval_category" element="NULL" name="x_snc_wdocapp_document_approval_category" parent="NULL" relationship="NULL" sys_domain="global" view="0c029fc00a0a0b2c001aa3d4ed9f69e8">107550fb36008610041bcc566cd806ce</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:38:49</sys_created_on>
+            <sys_id>9c7550fb930086107283eb8469e7edcc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:38:49</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_snc_wdocapp_document_approval_category</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+            <sys_created_on>2024-02-05 21:38:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>107550fb36008610041bcc566cd806ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_wdocapp_document_approval_category</sys_name>
+            <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+            <sys_update_name>sys_ui_list_x_snc_wdocapp_document_approval_category_text_search</sys_update_name>
+            <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+            <sys_updated_on>2024-02-05 21:38:49</sys_updated_on>
+            <sys_user/>
+            <view display_value="Text_search" name="text_search">0c029fc00a0a0b2c001aa3d4ed9f69e8</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

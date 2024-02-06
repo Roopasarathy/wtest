@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>x_snc_wdocapp.document_approval_copy_rig</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript( /* GlideRecord */ current, /* TemplatePrinter */ template,
+    /* Optional EmailOutbound */
+    email, /* Optional GlideRecord */ email_action,
+    /* Optional GlideRecord */
+    event) {
+
+    // Add your code here
+    var color = 'color: #454D5B ;';
+    var font_size = 'font-size:12px';
+    var copy_right = gs.getProperty("x_snc_wdocapp.u_copy_right");
+    if (!copy_right) {
+        copy_right = "&copy;2023 WDocApp All rights reserved.";
+    }
+    template.print('<p style="text-align: center; ' + color + '; ' + font_size + ';">' + copy_right + '</p>');
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:38:47</sys_created_on>
+        <sys_id>ac7590fb50008610608b9b7bac0c7a6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_wdocapp.document_approval_copy_rig</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_script_email_ac7590fb50008610608b9b7bac0c7a6c</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:38:47</sys_updated_on>
+    </sys_script_email>
+</record_update>

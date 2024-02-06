@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_wdocapp.DocApprovalUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>DocApprovalUtils</name>
+        <script><![CDATA[var DocApprovalUtils = Class.create();
+DocApprovalUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	checkHex: function(code) {
+		var RegExp = /^#[0-9A-F]{6}$/i;
+		return RegExp.test(code);
+	},
+
+    type: 'DocApprovalUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:38:57</sys_created_on>
+        <sys_id>687590fbb5008610b82d1bcb168d6e6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DocApprovalUtils</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_script_include_687590fbb5008610b82d1bcb168d6e6c</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:38:57</sys_updated_on>
+    </sys_script_include>
+</record_update>

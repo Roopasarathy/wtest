@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_view_template_slot">
+    <sys_sg_view_template_slot action="INSERT_OR_UPDATE">
+        <name>text_01</name>
+        <sys_class_name>sys_sg_view_template_slot</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:38:45</sys_created_on>
+        <sys_id>1c7550fbdc0086105c121912925912d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>text_01</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_sg_view_template_slot_1c7550fbdc0086105c121912925912d4</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:38:45</sys_updated_on>
+        <type>Text</type>
+        <view_template display_value="Document Approval View Template">587550fbc30086109436ea378604e0d4</view_template>
+    </sys_sg_view_template_slot>
+</record_update>

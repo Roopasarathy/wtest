@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream_m2m_master_item">
+    <sys_sg_item_stream_m2m_master_item action="INSERT_OR_UPDATE">
+        <item_stream display_value="Approvals this month Item Stream">187550fbdf008610a6ced8d0dd6d6edb</item_stream>
+        <master_item display_value="Approvals this month Main Item">9c7550fbd600861010df8cfb42a486db</master_item>
+        <sys_class_name>sys_sg_item_stream_m2m_master_item</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907550fb8a008610f16cdc6ed04dd8db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_sg_item_stream_m2m_master_item_907550fb8a008610f16cdc6ed04dd8db</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_sg_item_stream_m2m_master_item>
+</record_update>

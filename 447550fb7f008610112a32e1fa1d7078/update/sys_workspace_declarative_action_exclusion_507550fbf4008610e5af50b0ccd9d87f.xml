@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_workspace_declarative_action_exclusion">
+    <sys_workspace_declarative_action_exclusion action="INSERT_OR_UPDATE">
+        <action_assignment display_value="create-new-uxf">17c13e7273131010a0a79329faf6a794</action_assignment>
+        <exclude_all_child_tables>false</exclude_all_child_tables>
+        <exclude_self>true</exclude_self>
+        <sys_class_name>sys_workspace_declarative_action_exclusion</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:38:54</sys_created_on>
+        <sys_id>507550fbf4008610e5af50b0ccd9d87f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_wdocapp_document_approver</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_workspace_declarative_action_exclusion_507550fbf4008610e5af50b0ccd9d87f</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:38:54</sys_updated_on>
+        <table>x_snc_wdocapp_document_approver</table>
+        <view/>
+    </sys_workspace_declarative_action_exclusion>
+</record_update>

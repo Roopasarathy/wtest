@@ -1,0 +1,3139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>Single Stage Approval</annotation>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=86988463000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This is a demo flow for document approval app consisting of a single stage approval.</description>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>x_snc_wdocapp_single_stage_approval</internal_name>
+        <label_cache>[{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Company➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"core_company","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager.email","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.name","label":"1 - Look Up Record➛Document Approval Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sn_doc_approval_document_approval","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.status","label":"1 - Look Up Record➛Document Approval Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"sn_doc_approval_document_approval","column_name":"status","choices":[{"label":"-- None --","image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"used":false,"value":""},{"image":"","reference":false,"rawLabel":"Submitted","selected":false,"label":"Submitted","missing":false,"used":false,"value":"submitted","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Returned","selected":false,"label":"Returned","missing":false,"used":false,"value":"returned","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Approved","selected":false,"label":"Approved","missing":false,"used":false,"value":"approved","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Rejected","selected":false,"label":"Rejected","missing":false,"used":false,"value":"rejected","parameters":{"name":"sn_doc_approval_document_approval"}}]},{"name":"subflow.document_id","label":"Input➛Document Id","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d6126c60-e5a3-48c1-a151-305327285308"}},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record","label":"1 - Look Up Record➛Document Approval Record","reference":"sn_doc_approval_document_approval","reference_display":"Document Approval","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id","label":"1 - Look Up Record➛Document Approval Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_doc_approval_document_approval","column_name":"sys_id"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name","label":"2 - Create or Update Record➛Document Approver Record➛Approver➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id","label":"2 - Create or Update Record➛Document Approver Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_doc_approval_document_approver","column_name":"sys_id"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record","label":"2 - Create or Update Record➛Document Approver Record","reference":"sn_doc_approval_document_approver","reference_display":"Document Approver","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.state","label":"2 - Create or Update Record➛Document Approver Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"sn_doc_approval_document_approver","column_name":"state","choices":[{"label":"-- None --","image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"used":false,"value":""},{"image":"","reference":false,"rawLabel":"Submitted","selected":false,"label":"Submitted","missing":false,"used":false,"value":"submitted","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Returned","selected":false,"label":"Returned","missing":false,"used":false,"value":"returned","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Approved","selected":false,"label":"Approved","missing":false,"used":false,"value":"approved","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"No Longer Required","selected":false,"label":"No Longer Required","missing":false,"used":false,"value":"not_required","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Rejected","selected":false,"label":"Rejected","missing":false,"used":false,"value":"rejected","parameters":{"name":"sn_doc_approval_document_approver"}}]}]</label_cache>
+        <master_snapshot>147590fb090086105183db4d1a9dbe20</master_snapshot>
+        <name>Single Stage Approval</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>!!!ux_url_prefix!!!</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d47590fb2a008610fca3da8c7583f020</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Single Stage Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_hub_flow_d47590fb2a008610fca3da8c7583f020</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=d47590fb2a008610fca3da8c7583f020"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d47590fb2a008610fca3da8c7583f020"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=d47590fb2a008610fca3da8c7583f020"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=d47590fb2a008610fca3da8c7583f020"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d47590fb2a008610fca3da8c7583f020^sys_idNOT INd87590fb4c0086108c2b948bdaacb41f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d47590fb2a008610fca3da8c7583f020</id>
+        <name>Single Stage Approval</name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fb4c0086108c2b948bdaacb41f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=d87590fb4c0086108c2b948bdaacb41f"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=d47590fb2a008610fca3da8c7583f020^sys_idNOT IN547590fb870086106e1d81769be6641f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d6126c60-e5a3-48c1-a151-305327285308</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>document_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Document Id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</model>
+        <model_id>d47590fb2a008610fca3da8c7583f020</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d47590fb2a008610fca3da8c7583f020</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fb870086106e1d81769be6641f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=547590fb870086106e1d81769be6641f"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=d47590fb2a008610fca3da8c7583f020"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d47590fb2a008610fca3da8c7583f020"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=d47590fb2a008610fca3da8c7583f020^sys_idNOT IN507590fb3a00861028287242393d3417,5c7550fb26008610ce1ccecb4440c97b,5c7590fbb3008610f0a69b5992fdbc17,5c7590fbd80086107704577840031b1a,987590fbaa008610e5f94db1063cd31d,987590fbb00086103b0dcf7ec7721111,9c7590fb950086102398c2dbf0e2c91f,d47590fb5800861018094bde62a59c1d,d87590fbef00861060c3e54910c11f19,dc7590fbec00861050af0bb720a45e18"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>507590fb3a00861028287242393d3417</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-06 01:05:33</sys_updated_on>
+        <ui_id>b0b653c2-0eff-43b2-bd40-2b43f54da2c7</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=507590fb3a00861028287242393d3417"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>507590fb3a00861028287242393d3417</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fbad00861021b0d14c3c6c5a16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>507590fb3a00861028287242393d3417</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fbb3008610169805ae4a7a3516</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>status=returned^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=507590fb3a00861028287242393d3417"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>507590fb3a00861028287242393d3417</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987590fb91008610fcc3e133de195a17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=507590fb3a00861028287242393d3417^sys_idNOT IN147550fb81008610cba809ca2577457b"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>507590fb3a00861028287242393d3417</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147550fb81008610cba809ca2577457b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=507590fb3a00861028287242393d3417"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent display_value="Create or Update Record">e057d2e253b3230034c6ddeeff7b1261</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7550fb26008610ce1ccecb4440c97b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-06 01:05:32</sys_updated_on>
+        <ui_id>8c318f1d-b260-48a9-89a8-fa06592d6975</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5c7550fb26008610ce1ccecb4440c97b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5c7550fb26008610ce1ccecb4440c97b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107550fb100086103eea98a78fedd77c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approver</value>
+        <variable display_value="Table Name">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5c7550fb26008610ce1ccecb4440c97b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>5c7550fb26008610ce1ccecb4440c97b</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47550fbb9008610e1ec55e68593c87b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>document={{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}^approver={{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager}}^state=submitted^coalesce_fields=document</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5c7550fb26008610ce1ccecb4440c97b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5c7550fb26008610ce1ccecb4440c97b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">607590fba7008610d646b7bf6fd08137</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7590fbb3008610f0a69b5992fdbc17</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-06 01:05:33</sys_updated_on>
+        <ui_id>3d5b9d74-5170-4a8b-8888-764b03ee96eb</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5c7590fbb3008610f0a69b5992fdbc17"/>
+    <sys_element_mapping action="delete_multiple" query="id=5c7590fbb3008610f0a69b5992fdbc17"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>5c7590fbb3008610f0a69b5992fdbc17</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fb4100861093fc78d094b09113</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>5c7590fbb3008610f0a69b5992fdbc17</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187590fbb40086100e042ee15fc33513</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>5c7590fbb3008610f0a69b5992fdbc17</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fb2100861054fd92fdd6003b13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>5c7590fbb3008610f0a69b5992fdbc17</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947590fb80008610fa5c6a3aadfd9a15</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>5c7590fbb3008610f0a69b5992fdbc17</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d07590fbd3008610ddd12e3b0423bc15</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>5c7590fbb3008610f0a69b5992fdbc17</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47590fbdf008610383c6632fb6fa314</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>5c7590fbb3008610f0a69b5992fdbc17</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987590fb4a0086102fc2ad62417ead14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>5c7590fbb3008610f0a69b5992fdbc17</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147590fb5f008610470133d8e3e7c214</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5c7590fbb3008610f0a69b5992fdbc17^sys_idNOT IN107590fb27008610f2517224003d1015,507590fb0b0086107db612131c4b8714,587590fb8c00861059d643f4b163aa15,5c7590fb3d0086104e74203f0fa97014,907590fb2e008610ffc9e53aa4da5513,9c7590fb9200861007e95ed108b9c213"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>5c7590fbb3008610f0a69b5992fdbc17</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107590fb27008610f2517224003d1015</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>5c7590fbb3008610f0a69b5992fdbc17</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>507590fb0b0086107db612131c4b8714</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>reason_for_return</input_name>
+        <instance>5c7590fbb3008610f0a69b5992fdbc17</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason_for_return":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\n"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587590fb8c00861059d643f4b163aa15</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>status</input_name>
+        <instance>5c7590fbb3008610f0a69b5992fdbc17</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"status":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7590fb3d0086104e74203f0fa97014</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>5c7590fbb3008610f0a69b5992fdbc17</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027Your document has been approved\u0027;"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907590fb2e008610ffc9e53aa4da5513</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>company</input_name>
+        <instance>5c7590fbb3008610f0a69b5992fdbc17</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"company":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7590fb9200861007e95ed108b9c213</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5c7590fbb3008610f0a69b5992fdbc17"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">607590fba7008610d646b7bf6fd08137</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <generation_source/>
+        <order>14</order>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7590fbd80086107704577840031b1a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-06 01:05:33</sys_updated_on>
+        <ui_id>a51433bb-c88e-40db-a399-609d25fb9332</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5c7590fbd80086107704577840031b1a"/>
+    <sys_element_mapping action="delete_multiple" query="id=5c7590fbd80086107704577840031b1a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>5c7590fbd80086107704577840031b1a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fb9700861092171b5aebf9de1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>5c7590fbd80086107704577840031b1a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187590fb190086107f1a6e9abe29061c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>5c7590fbd80086107704577840031b1a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>dc7590fbd900861089101c44eb9e991b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>5c7590fbd80086107704577840031b1a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fbbe00861026a751e6f08cfe1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>5c7590fbd80086107704577840031b1a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907590fba3008610f37a08b210af7f1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>5c7590fbd80086107704577840031b1a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587590fb7f0086107e049cc093a2301b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>5c7590fbd80086107704577840031b1a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947590fb4000861037ea4e4a7534061b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>5c7590fbd80086107704577840031b1a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fb56008610a2c844f3fe87b31b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5c7590fbd80086107704577840031b1a^sys_idNOT IN587590fb7a008610fdb8c339fdac5818,907590fbf300861083fa5623d267b619"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>5c7590fbd80086107704577840031b1a</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587590fb7a008610fdb8c339fdac5818</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>5c7590fbd80086107704577840031b1a</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027Your document has been rejected\u0027;"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907590fbf300861083fa5623d267b619</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5c7590fbd80086107704577840031b1a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987590fbaa008610e5f94db1063cd31d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-06 01:05:32</sys_updated_on>
+        <ui_id>e0d3190d-f39b-4450-ac07-599a9b344b4f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=987590fbaa008610e5f94db1063cd31d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>987590fbaa008610e5f94db1063cd31d</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147590fb240086101a793a09dafaa91d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approver</value>
+        <variable display_value="Table">45ce8a4187120010663ca1bb36cb0bea</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>987590fbaa008610e5f94db1063cd31d</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d07590fb6d0086109cf643d45fa1171e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>state!=submitted</value>
+        <variable display_value="Conditions">49ce8a4187120010663ca1bb36cb0bef</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=987590fbaa008610e5f94db1063cd31d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>987590fbaa008610e5f94db1063cd31d</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7590fbcc008610c15d632ea5e17b1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=987590fbaa008610e5f94db1063cd31d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=987590fbaa008610e5f94db1063cd31d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987590fbb00086103b0dcf7ec7721111</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-06 01:05:33</sys_updated_on>
+        <ui_id>0922a0db-ef1d-4937-b567-1bccf564b2ac</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=987590fbb00086103b0dcf7ec7721111"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>987590fbb00086103b0dcf7ec7721111</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>507590fb3f0086108ec51accb4bbd411</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>987590fbb00086103b0dcf7ec7721111</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d07590fb6900861043cccf3a75e8ff12</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>status=rejected^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=987590fbb00086103b0dcf7ec7721111"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>987590fbb00086103b0dcf7ec7721111</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fbee0086109434ccbb767dc212</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=987590fbb00086103b0dcf7ec7721111^sys_idNOT IN9c7550fb610086103f45dc5cd167ae7a"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>987590fbb00086103b0dcf7ec7721111</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7550fb610086103f45dc5cd167ae7a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=987590fbb00086103b0dcf7ec7721111"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7590fb950086102398c2dbf0e2c91f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-06 01:05:33</sys_updated_on>
+        <ui_id>6540a418-193f-4bc9-a76e-070450969598</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9c7590fb950086102398c2dbf0e2c91f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9c7590fb950086102398c2dbf0e2c91f</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907590fbb50086104eb4103150a7581f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9c7590fb950086102398c2dbf0e2c91f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>dc7590fb0c00861082358984e7b9f21e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>status=approved^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9c7590fb950086102398c2dbf0e2c91f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>9c7590fb950086102398c2dbf0e2c91f</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187590fbee00861036b778307275291f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9c7590fb950086102398c2dbf0e2c91f^sys_idNOT IN987550fb770086100e435f458851387b"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>9c7590fb950086102398c2dbf0e2c91f</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987550fb770086100e435f458851387b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9c7590fb950086102398c2dbf0e2c91f"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">607590fba7008610d646b7bf6fd08137</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47590fb5800861018094bde62a59c1d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-06 01:05:33</sys_updated_on>
+        <ui_id>ced8cff1-e8ac-493c-bcc1-3a2cc25c0a0e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d47590fb5800861018094bde62a59c1d"/>
+    <sys_element_mapping action="delete_multiple" query="id=d47590fb5800861018094bde62a59c1d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>d47590fb5800861018094bde62a59c1d</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107590fb5d00861015042ee15431131e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>d47590fb5800861018094bde62a59c1d</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>507590fb4d00861011fe1cd15e51eb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>d47590fb5800861018094bde62a59c1d</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7590fb9f0086106d93308af600f71c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>d47590fb5800861018094bde62a59c1d</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587590fbbd008610ba69bd5df15b021e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>d47590fb5800861018094bde62a59c1d</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fb10008610f232b045a8b0c61e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>d47590fb5800861018094bde62a59c1d</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947590fb9d008610005cb5c58ba1d71e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>d47590fb5800861018094bde62a59c1d</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147590fbfc008610b873ea456be1a01a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>d47590fb5800861018094bde62a59c1d</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47590fb9c008610f25f08a1edc9261a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d47590fb5800861018094bde62a59c1d^sys_idNOT IN107590fb570086104173459f86d8fd1b,987590fb6500861084ac6c6ea473171a,d07590fbb30086108a56e7ee13cd281b"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>d47590fb5800861018094bde62a59c1d</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn \u0027Your document has been returned\u0027;"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107590fb570086104173459f86d8fd1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>d47590fb5800861018094bde62a59c1d</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987590fb6500861084ac6c6ea473171a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>d47590fb5800861018094bde62a59c1d</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d07590fbb30086108a56e7ee13cd281b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d47590fb5800861018094bde62a59c1d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fbef00861060c3e54910c11f19</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-06 01:05:32</sys_updated_on>
+        <ui_id>1bccda56-a014-4626-a57f-eb51cec42306</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d87590fbef00861060c3e54910c11f19"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d87590fbef00861060c3e54910c11f19</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fba900861028012a504abe9c18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approval</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d87590fbef00861060c3e54910c11f19"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>d87590fbef00861060c3e54910c11f19</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187590fb8a008610766dbe1a6ed10719</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{subflow.document_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d87590fbef00861060c3e54910c11f19"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d87590fbef00861060c3e54910c11f19"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">607590fba7008610d646b7bf6fd08137</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>dc7590fbec00861050af0bb720a45e18</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-02-06 01:05:32</sys_updated_on>
+        <ui_id>a99d4700-da0c-4f8c-bce4-a29fc3b64677</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dc7590fbec00861050af0bb720a45e18"/>
+    <sys_element_mapping action="delete_multiple" query="id=dc7590fbec00861050af0bb720a45e18"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>dc7590fbec00861050af0bb720a45e18</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947590fb2d008610202f25503f255c18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>dc7590fbec00861050af0bb720a45e18</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7590fb640086107992fb792c162e19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>dc7590fbec00861050af0bb720a45e18</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>507590fbf0008610beaa2bfbb8da0b1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>dc7590fbec00861050af0bb720a45e18</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fbd5008610b16e71be9966ab19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>dc7590fbec00861050af0bb720a45e18</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fba7008610736642d464e1b115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>dc7590fbec00861050af0bb720a45e18</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>dc7590fba2008610f62b363535820115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>dc7590fbec00861050af0bb720a45e18</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147590fb310086101ddced6ce5c8a317</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.status}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>dc7590fbec00861050af0bb720a45e18</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47590fb55008610bded115bf423ed17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dc7590fbec00861050af0bb720a45e18^sys_idNOT IN107590fb660086103b69b687232f0d18,187590fbde0086105bec4919779b0c16,907590fbc2008610dc99fad4ad48fd16,9c7590fb0000861057e8f52bbd527c16"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>dc7590fbec00861050af0bb720a45e18</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107590fb660086103b69b687232f0d18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>document_name</input_name>
+        <instance>dc7590fbec00861050af0bb720a45e18</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"document_name":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187590fbde0086105bec4919779b0c16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>document_owner</input_name>
+        <instance>dc7590fbec00861050af0bb720a45e18</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"document_owner":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907590fbc2008610dc99fad4ad48fd16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>dc7590fbec00861050af0bb720a45e18</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027You have a document to review\u0027;"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7590fb0000861057e8f52bbd527c16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dc7590fbec00861050af0bb720a45e18"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=d47590fb2a008610fca3da8c7583f020"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=d47590fb2a008610fca3da8c7583f020^sys_idNOT IN547590fb110086106b859322cee90e10,5c7590fbd5008610548f4a23f32f3e0e,907590fb55008610ecee27956bf3dc10,d47590fb9a008610929118bc7e848711,d87590fb32008610f5c14c3556f65c0d,dc7590fb6f008610a3b381d7d875b00f"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">187550fbbf008610043de5218c9fa77a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fb110086106b859322cee90e10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=547590fb110086106b859322cee90e10"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>547590fb110086106b859322cee90e10</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587590fb6c00861073dc2bffab7d4d0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>Rejected</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=547590fb110086106b859322cee90e10"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>547590fb110086106b859322cee90e10</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187590fbaa0086107e2e6dfe8ad66210</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=rejected</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=547590fb110086106b859322cee90e10"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=547590fb110086106b859322cee90e10"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">907550fbaa008610d90973162a2cc77a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7590fbd5008610548f4a23f32f3e0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=5c7590fbd5008610548f4a23f32f3e0e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>5c7590fbd5008610548f4a23f32f3e0e</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fbf6008610e83830466084f310</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>Returned</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5c7590fbd5008610548f4a23f32f3e0e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>5c7590fbd5008610548f4a23f32f3e0e</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fb1c0086108bd5897ff81cff0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=returned</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5c7590fbd5008610548f4a23f32f3e0e"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5c7590fbd5008610548f4a23f32f3e0e"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d87550fb7a008610bb71c74c108d4c7a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>16</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907590fb55008610ecee27956bf3dc10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>d683e08e-e237-4968-9076-bdac84bfc528</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=907590fb55008610ecee27956bf3dc10"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=907590fb55008610ecee27956bf3dc10"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=907590fb55008610ecee27956bf3dc10"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">507550fbaf00861040ccf74d7eb7d37b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47590fb9a008610929118bc7e848711</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d47590fb9a008610929118bc7e848711"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>d47590fb9a008610929118bc7e848711</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587590fb9200861080cd1b6286cde612</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>Approved</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d47590fb9a008610929118bc7e848711"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>d47590fb9a008610929118bc7e848711</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947590fb5900861087f5ed5ac47ef012</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=approved</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d47590fb9a008610929118bc7e848711"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d47590fb9a008610929118bc7e848711"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">dc7550fbe2008610449fa70abd497f79</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fb32008610f5c14c3556f65c0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>3d266c9b-fd12-4b9e-af17-c24120616c5f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d87590fb32008610f5c14c3556f65c0d"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d87590fb32008610f5c14c3556f65c0d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d87590fb32008610f5c14c3556f65c0d"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">547550fb77008610c908e98d1ce2c77a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>dc7590fb6f008610a3b381d7d875b00f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>423ea012-c51a-42bb-b340-023487961b5d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=dc7590fb6f008610a3b381d7d875b00f"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=dc7590fb6f008610a3b381d7d875b00f"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dc7590fb6f008610a3b381d7d875b00f"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=d47590fb2a008610fca3da8c7583f020"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=d47590fb2a008610fca3da8c7583f020"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_d47590fb2a008610fca3da8c7583f020^sys_idNOT IN147590fb230086102d27d4eabc4b150e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>document_id</element>
+        <help/>
+        <hint/>
+        <label>Document Id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d47590fb2a008610fca3da8c7583f020</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147590fb230086102d27d4eabc4b150e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Id</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d47590fb2a008610fca3da8c7583f020_document_id_en</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_d47590fb2a008610fca3da8c7583f020"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_d47590fb2a008610fca3da8c7583f020"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_d47590fb2a008610fca3da8c7583f020"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation>Single Stage Approval</annotation>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This is a demo flow for document approval app consisting of a single stage approval.</description>
+        <flow_priority/>
+        <internal_name>x_snc_wdocapp_single_stage_approval</internal_name>
+        <label_cache>[{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Company➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"core_company","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager.email","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.name","label":"1 - Look Up Record➛Document Approval Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sn_doc_approval_document_approval","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.status","label":"1 - Look Up Record➛Document Approval Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"sn_doc_approval_document_approval","column_name":"status","choices":[{"label":"-- None --","image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"used":false,"value":""},{"image":"","reference":false,"rawLabel":"Submitted","selected":false,"label":"Submitted","missing":false,"used":false,"value":"submitted","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Returned","selected":false,"label":"Returned","missing":false,"used":false,"value":"returned","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Approved","selected":false,"label":"Approved","missing":false,"used":false,"value":"approved","parameters":{"name":"sn_doc_approval_document_approval"}},{"image":"","reference":false,"rawLabel":"Rejected","selected":false,"label":"Rejected","missing":false,"used":false,"value":"rejected","parameters":{"name":"sn_doc_approval_document_approval"}}]},{"name":"subflow.document_id","label":"Input➛Document Id","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d6126c60-e5a3-48c1-a151-305327285308"}},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record","label":"1 - Look Up Record➛Document Approval Record","reference":"sn_doc_approval_document_approval","reference_display":"Document Approval","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id","label":"1 - Look Up Record➛Document Approval Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_doc_approval_document_approval","column_name":"sys_id"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email","label":"1 - Look Up Record➛Document Approval Record➛Submitter➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name","label":"2 - Create or Update Record➛Document Approver Record➛Approver➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id","label":"2 - Create or Update Record➛Document Approver Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_doc_approval_document_approver","column_name":"sys_id"},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record","label":"2 - Create or Update Record➛Document Approver Record","reference":"sn_doc_approval_document_approver","reference_display":"Document Approver","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"8c318f1d-b260-48a9-89a8-fa06592d6975.record.state","label":"2 - Create or Update Record➛Document Approver Record➛State","reference":"","reference_display":"State","type":"choice","base_type":"choice","parent_table_name":"sn_doc_approval_document_approver","column_name":"state","choices":[{"label":"-- None --","image":"","reference":false,"rawLabel":"-- None --","selected":false,"missing":false,"used":false,"value":""},{"image":"","reference":false,"rawLabel":"Submitted","selected":false,"label":"Submitted","missing":false,"used":false,"value":"submitted","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Returned","selected":false,"label":"Returned","missing":false,"used":false,"value":"returned","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Approved","selected":false,"label":"Approved","missing":false,"used":false,"value":"approved","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"No Longer Required","selected":false,"label":"No Longer Required","missing":false,"used":false,"value":"not_required","parameters":{"name":"sn_doc_approval_document_approver"}},{"image":"","reference":false,"rawLabel":"Rejected","selected":false,"label":"Rejected","missing":false,"used":false,"value":"rejected","parameters":{"name":"sn_doc_approval_document_approver"}}]}]</label_cache>
+        <master>true</master>
+        <name>Single Stage Approval</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>147590fb090086105183db4d1a9dbe20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=147590fb090086105183db4d1a9dbe20"/>
+    <sys_variable_value action="delete_multiple" query="document_key=147590fb090086105183db4d1a9dbe20"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=147590fb090086105183db4d1a9dbe20"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=147590fb090086105183db4d1a9dbe20"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=147590fb090086105183db4d1a9dbe20^sys_idNOT IN507590fbb50086106bb45acded665c0e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>147590fb090086105183db4d1a9dbe20</id>
+        <name>Single Stage Approval</name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>507590fbb50086106bb45acded665c0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=507590fbb50086106bb45acded665c0e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=147590fb090086105183db4d1a9dbe20^sys_idNOT INd47590fbe3008610bc5516313f1e690e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d6126c60-e5a3-48c1-a151-305327285308</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>document_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Document Id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</model>
+        <model_id>147590fb090086105183db4d1a9dbe20</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_147590fb090086105183db4d1a9dbe20</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47590fbe3008610bc5516313f1e690e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d47590fbe3008610bc5516313f1e690e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=147590fb090086105183db4d1a9dbe20"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=147590fb090086105183db4d1a9dbe20"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=147590fb090086105183db4d1a9dbe20^sys_idNOT IN107590fbd0008610fb2a558600576700,187590fb5d008610cca6e6aadc6d830d,1c7590fb3c0086102393cd5fea26ff06,1c7590fbcf00861038b6a86a5334490c,547590fbfb0086109daeea6b8a4f1e04,587590fb9600861043d46df8ff07dc06,907590fb4e00861044659ce7320edb0a,947550fb030086104bc8cc33b8e74f79,d07590fbaa008610428a7e174ff84e09,dc7590fb9800861045eae67e8eb0b106"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107590fbd0008610fb2a558600576700</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>e0d3190d-f39b-4450-ac07-599a9b344b4f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=107590fbd0008610fb2a558600576700"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>107590fbd0008610fb2a558600576700</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187550fb9000861063c6312ba4daa6fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approver</value>
+        <variable display_value="Table">45ce8a4187120010663ca1bb36cb0bea</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>107590fbd0008610fb2a558600576700</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987550fbc70086108133d0896dffb6ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>state!=submitted</value>
+        <variable display_value="Conditions">49ce8a4187120010663ca1bb36cb0bef</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=107590fbd0008610fb2a558600576700"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>107590fbd0008610fb2a558600576700</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7550fbf0008610267ce8c98c45a4ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=107590fbd0008610fb2a558600576700"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=107590fbd0008610fb2a558600576700"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187590fb5d008610cca6e6aadc6d830d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>6540a418-193f-4bc9-a76e-070450969598</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=187590fb5d008610cca6e6aadc6d830d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>187590fb5d008610cca6e6aadc6d830d</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fb5b00861036d6f4378097f20d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>status=approved^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>187590fb5d008610cca6e6aadc6d830d</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907590fb56008610a35cbe5994d2540d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=187590fb5d008610cca6e6aadc6d830d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>187590fb5d008610cca6e6aadc6d830d</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107590fbc70086101d5683bd6583b10c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=187590fb5d008610cca6e6aadc6d830d^sys_idNOT IN1c7550fb870086105431b8e09ee98a79"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>187590fb5d008610cca6e6aadc6d830d</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7550fb870086105431b8e09ee98a79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=187590fb5d008610cca6e6aadc6d830d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">607590fba7008610d646b7bf6fd08137</action_type>
+        <action_type_parent display_value="Create Event">ac7590fb9f00861026f802d7d1f55b36</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fb3c0086102393cd5fea26ff06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>3d5b9d74-5170-4a8b-8888-764b03ee96eb</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1c7590fb3c0086102393cd5fea26ff06"/>
+    <sys_element_mapping action="delete_multiple" query="id=1c7590fb3c0086102393cd5fea26ff06"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>1c7590fb3c0086102393cd5fea26ff06</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987590fb5c0086108db937ae4dd94f05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>1c7590fb3c0086102393cd5fea26ff06</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107590fbfe008610e8e3d744e5327c06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>1c7590fb3c0086102393cd5fea26ff06</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7590fb82008610f9ecbb8df3f75205</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>1c7590fb3c0086102393cd5fea26ff06</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d07590fbcf008610f60c41f5bafdd906</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>1c7590fb3c0086102393cd5fea26ff06</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fb320086105156d32e83116d03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>1c7590fb3c0086102393cd5fea26ff06</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947590fb73008610a1e526db4315d903</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>1c7590fb3c0086102393cd5fea26ff06</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587590fb67008610855ecea6ed886b03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>1c7590fb3c0086102393cd5fea26ff06</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d07590fb4200861063ad78ac77708b03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1c7590fb3c0086102393cd5fea26ff06^sys_idNOT IN107590fbe5008610834671c67165e703,187590fb130086108a18510d8962af04,907590fb9c008610d2084bdedeaa1b04,d47590fbec008610736829869602ad02,d87590fbb10086103cdd5a6b873ce904,dc7590fbd6008610ca49fb1eec4bc803"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>company</input_name>
+        <instance>1c7590fb3c0086102393cd5fea26ff06</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"company":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107590fbe5008610834671c67165e703</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>1c7590fb3c0086102393cd5fea26ff06</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187590fb130086108a18510d8962af04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>1c7590fb3c0086102393cd5fea26ff06</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907590fb9c008610d2084bdedeaa1b04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>status</input_name>
+        <instance>1c7590fb3c0086102393cd5fea26ff06</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"status":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47590fbec008610736829869602ad02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>1c7590fb3c0086102393cd5fea26ff06</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027Your document has been approved\u0027;"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fbb10086103cdd5a6b873ce904</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>reason_for_return</input_name>
+        <instance>1c7590fb3c0086102393cd5fea26ff06</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason_for_return":{"scriptActive":false,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\n"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>dc7590fbd6008610ca49fb1eec4bc803</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1c7590fb3c0086102393cd5fea26ff06"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">607590fba7008610d646b7bf6fd08137</action_type>
+        <action_type_parent display_value="Create Event">ac7590fb9f00861026f802d7d1f55b36</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <generation_source/>
+        <order>14</order>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fbcf00861038b6a86a5334490c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>a51433bb-c88e-40db-a399-609d25fb9332</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1c7590fbcf00861038b6a86a5334490c"/>
+    <sys_element_mapping action="delete_multiple" query="id=1c7590fbcf00861038b6a86a5334490c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>1c7590fbcf00861038b6a86a5334490c</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d07590fb7700861075b1efc93382d80c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>1c7590fbcf00861038b6a86a5334490c</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587590fbf60086104273930c573cbd0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>1c7590fbcf00861038b6a86a5334490c</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987590fbf9008610b0b0e6a6acd8080b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>1c7590fbcf00861038b6a86a5334490c</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7590fb9e0086101d6bcf0e951f280b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>1c7590fbcf00861038b6a86a5334490c</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947590fb0f00861026dbdfd669d6f50c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>1c7590fbcf00861038b6a86a5334490c</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fba5008610ca220ae6ac659e09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>1c7590fbcf00861038b6a86a5334490c</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587590fb10008610dcf054e427493809</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>1c7590fbcf00861038b6a86a5334490c</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>dc7590fb300086109fb42e1f4d8c9809</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1c7590fbcf00861038b6a86a5334490c^sys_idNOT IN547590fbdb008610d431a68bdf88e90a,d47590fb18008610b6fe601648da590b"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>1c7590fbcf00861038b6a86a5334490c</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fbdb008610d431a68bdf88e90a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>1c7590fbcf00861038b6a86a5334490c</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027Your document has been rejected\u0027;"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47590fb18008610b6fe601648da590b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1c7590fbcf00861038b6a86a5334490c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">607590fba7008610d646b7bf6fd08137</action_type>
+        <action_type_parent display_value="Create Event">ac7590fb9f00861026f802d7d1f55b36</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fbfb0086109daeea6b8a4f1e04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>ced8cff1-e8ac-493c-bcc1-3a2cc25c0a0e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=547590fbfb0086109daeea6b8a4f1e04"/>
+    <sys_element_mapping action="delete_multiple" query="id=547590fbfb0086109daeea6b8a4f1e04"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>547590fbfb0086109daeea6b8a4f1e04</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987590fbe1008610aabee88eaf6df202</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>547590fbfb0086109daeea6b8a4f1e04</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147590fb8a0086109e39b3a637599a02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>547590fbfb0086109daeea6b8a4f1e04</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7590fb590086102e3122ee45657202</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>547590fbfb0086109daeea6b8a4f1e04</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907590fb2e008610d0581cfb0eb8d201</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>547590fbfb0086109daeea6b8a4f1e04</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fb56008610b7808db3a1e83b01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>547590fbfb0086109daeea6b8a4f1e04</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fbaf008610984aa770fc51aa01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>547590fbfb0086109daeea6b8a4f1e04</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7590fbb80086102b7d0d5956d43201</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>547590fbfb0086109daeea6b8a4f1e04</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187590fbe800861000db14da9f0e1101</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=547590fbfb0086109daeea6b8a4f1e04^sys_idNOT IN1c7590fb2500861055c52c9d3b82e600,947590fbde00861029a08f43493d8000,dc7590fb4a00861020576d64eb48fd00"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>547590fbfb0086109daeea6b8a4f1e04</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7590fb2500861055c52c9d3b82e600</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>547590fbfb0086109daeea6b8a4f1e04</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\nreturn \u0027Your document has been returned\u0027;"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947590fbde00861029a08f43493d8000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>reason</input_name>
+        <instance>547590fbfb0086109daeea6b8a4f1e04</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"reason":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_record.record.comments.getJournalEntry(-1);"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>dc7590fb4a00861020576d64eb48fd00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=547590fbfb0086109daeea6b8a4f1e04"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587590fb9600861043d46df8ff07dc06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>0922a0db-ef1d-4937-b567-1bccf564b2ac</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=587590fb9600861043d46df8ff07dc06"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>587590fb9600861043d46df8ff07dc06</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>507590fb4f008610e86a0d3c24e3ee05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>status=rejected^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>587590fb9600861043d46df8ff07dc06</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7590fbed008610a075de62dc207b04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=587590fb9600861043d46df8ff07dc06"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>587590fb9600861043d46df8ff07dc06</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947590fb410086100cbb1bd87eae1b06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=587590fb9600861043d46df8ff07dc06^sys_idNOT IN107550fbfd0086105a98da7dc00b6979"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>587590fb9600861043d46df8ff07dc06</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107550fbfd0086105a98da7dc00b6979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=587590fb9600861043d46df8ff07dc06"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Event">607590fba7008610d646b7bf6fd08137</action_type>
+        <action_type_parent display_value="Create Event">ac7590fb9f00861026f802d7d1f55b36</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907590fb4e00861044659ce7320edb0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>a99d4700-da0c-4f8c-bce4-a29fc3b64677</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=907590fb4e00861044659ce7320edb0a"/>
+    <sys_element_mapping action="delete_multiple" query="id=907590fb4e00861044659ce7320edb0a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver</field>
+        <id>907590fb4e00861044659ce7320edb0a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>507590fb4b00861014e2f2747942cd0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.approver.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approver_id</field>
+        <id>907590fb4e00861044659ce7320edb0a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7590fb37008610f0de4d1c5c52360a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>company</field>
+        <id>907590fb4e00861044659ce7320edb0a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147590fbf4008610c8ef1155b6c3780b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_name</field>
+        <id>907590fb4e00861044659ce7320edb0a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>187590fb6b008610d8e8ba4f591ad80a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>document_owner</field>
+        <id>907590fb4e00861044659ce7320edb0a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fb50008610eaf0ac2426b7da0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>email_id</field>
+        <id>907590fb4e00861044659ce7320edb0a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7590fb8e0086109910956753473408</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>907590fb4e00861044659ce7320edb0a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>987590fb180086103ad0eb77fed7ab08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.status}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sysid</field>
+        <id>907590fb4e00861044659ce7320edb0a</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107590fb7e0086101cb788b4fc580509</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_607590fba7008610d646b7bf6fd08137</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=907590fb4e00861044659ce7320edb0a^sys_idNOT IN947590fb2a00861028de4ef74b187409,9c7590fbcc008610e75ceecec689cc07,d47590fb9700861070c5f6a1ea1a5708,d87590fbb1008610a73d517927626f07"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>document_name</input_name>
+        <instance>907590fb4e00861044659ce7320edb0a</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"document_name":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947590fb2a00861028de4ef74b187409</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>email_id</input_name>
+        <instance>907590fb4e00861044659ce7320edb0a</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"email_id":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7590fbcc008610e75ceecec689cc07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>message</input_name>
+        <instance>907590fb4e00861044659ce7320edb0a</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"message":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn \u0027You have a document to review\u0027;"}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47590fb9700861070c5f6a1ea1a5708</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>document_owner</input_name>
+        <instance>907590fb4e00861044659ce7320edb0a</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"document_owner":{"scriptActive":false}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87590fbb1008610a73d517927626f07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=907590fb4e00861044659ce7320edb0a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent display_value="Create or Update Record">e057d2e253b3230034c6ddeeff7b1261</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947550fb030086104bc8cc33b8e74f79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>8c318f1d-b260-48a9-89a8-fa06592d6975</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=947550fb030086104bc8cc33b8e74f79"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>947550fb030086104bc8cc33b8e74f79</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d07550fbe9008610094b9e3712b5dd79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approver</value>
+        <variable display_value="Table Name">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=947550fb030086104bc8cc33b8e74f79"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>947550fb030086104bc8cc33b8e74f79</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587550fbc5008610c8742e0ddd1a0179</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>document={{1bccda56-a014-4626-a57f-eb51cec42306.Record.sys_id}}^approver={{1bccda56-a014-4626-a57f-eb51cec42306.Record.submitter.manager}}^state=submitted^coalesce_fields=document</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=947550fb030086104bc8cc33b8e74f79"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=947550fb030086104bc8cc33b8e74f79"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d07590fbaa008610428a7e174ff84e09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>b0b653c2-0eff-43b2-bd40-2b43f54da2c7</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d07590fbaa008610428a7e174ff84e09"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d07590fbaa008610428a7e174ff84e09</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147590fb370086104ae0af7ec2e7c708</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>status=returned^work_notes=fd-scripted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d07590fbaa008610428a7e174ff84e09</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>507590fbdf00861098afd32fb0725908</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approval</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d07590fbaa008610428a7e174ff84e09"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>d07590fbaa008610428a7e174ff84e09</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547590fb720086105704987db74cf207</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{1bccda56-a014-4626-a57f-eb51cec42306.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d07590fbaa008610428a7e174ff84e09^sys_idNOT IN5c7550fbc5008610bacb2e81475a3b78"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>values</input_name>
+        <instance>d07590fbaa008610428a7e174ff84e09</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"work_notes":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value. \n**Order number is offset by +1 in Error Handling Section.\n**Available options display upon pressing \".\" after fd_data\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nreturn fd_data._2__create_or_update_record.record.comments;","savedValue":""}}</script>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7550fbc5008610bacb2e81475a3b78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d07590fbaa008610428a7e174ff84e09"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>dc7590fb9800861045eae67e8eb0b106</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>1bccda56-a014-4626-a57f-eb51cec42306</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dc7590fb9800861045eae67e8eb0b106"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dc7590fb9800861045eae67e8eb0b106</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47590fbbe0086101a11e95acf697305</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>x_snc_wdocapp_document_approval</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=dc7590fb9800861045eae67e8eb0b106"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>dc7590fb9800861045eae67e8eb0b106</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147590fb89008610819580d0a6743305</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{subflow.document_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dc7590fb9800861045eae67e8eb0b106"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dc7590fb9800861045eae67e8eb0b106"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=147590fb090086105183db4d1a9dbe20"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=147590fb090086105183db4d1a9dbe20^sys_idNOT IN147550fbd70086108157395ae8d62eff,1c7550fbb40086102f4dd628b5367cfd,507550fb3b0086100d57682765e048ff,587550fb620086106ddf7a587d86e6fd,9c7550fb4a00861087d799f57a3cf0fe,d87550fb08008610bcd949fe449251fe"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">187550fbbf008610043de5218c9fa77a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>147550fbd70086108157395ae8d62eff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=147550fbd70086108157395ae8d62eff"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>147550fbd70086108157395ae8d62eff</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>547550fb6100861095f860d40e887afe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>Rejected</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=147550fbd70086108157395ae8d62eff"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>147550fbd70086108157395ae8d62eff</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d47550fb7d008610bcf2b49c6636d5ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=rejected</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=147550fbd70086108157395ae8d62eff"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=147550fbd70086108157395ae8d62eff"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">dc7550fbe2008610449fa70abd497f79</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>1c7550fbb40086102f4dd628b5367cfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>3d266c9b-fd12-4b9e-af17-c24120616c5f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=1c7550fbb40086102f4dd628b5367cfd"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=1c7550fbb40086102f4dd628b5367cfd"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1c7550fbb40086102f4dd628b5367cfd"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">547550fb77008610c908e98d1ce2c77a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>507550fb3b0086100d57682765e048ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>423ea012-c51a-42bb-b340-023487961b5d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=507550fb3b0086100d57682765e048ff"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=507550fb3b0086100d57682765e048ff"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=507550fb3b0086100d57682765e048ff"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">907550fbaa008610d90973162a2cc77a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>587550fb620086106ddf7a587d86e6fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>c8ebe44c-3487-4d00-9067-3ff0859af400</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=587550fb620086106ddf7a587d86e6fd"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>587550fb620086106ddf7a587d86e6fd</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>5c7550fb25008610f1fdff9cf55cd8fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>Returned</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=587550fb620086106ddf7a587d86e6fd"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>587550fb620086106ddf7a587d86e6fd</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d07550fb8c008610c3aeb34b316cf0fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=returned</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=587550fb620086106ddf7a587d86e6fd"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=587550fb620086106ddf7a587d86e6fd"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">507550fbaf00861040ccf74d7eb7d37b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>9c7550fb4a00861087d799f57a3cf0fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>979a1b99-9196-4461-bf71-b0c57881ba29</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=9c7550fb4a00861087d799f57a3cf0fe"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>9c7550fb4a00861087d799f57a3cf0fe</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>107550fb5d008610320b93fd511ceafd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <value>Approved</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9c7550fb4a00861087d799f57a3cf0fe"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>9c7550fb4a00861087d799f57a3cf0fe</id>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>947550fba0008610627f37a12ffd5ffd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{8c318f1d-b260-48a9-89a8-fa06592d6975.record.state}}=approved</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=9c7550fb4a00861087d799f57a3cf0fe"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9c7550fb4a00861087d799f57a3cf0fe"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d87550fb7a008610bb71c74c108d4c7a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Single Stage Approval">147590fb090086105183db4d1a9dbe20</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>16</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>d762098d-f596-47bf-9c52-e515e42ac0f9</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>d87550fb08008610bcd949fe449251fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <ui_id>d683e08e-e237-4968-9076-bdac84bfc528</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d87550fb08008610bcd949fe449251fe"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d87550fb08008610bcd949fe449251fe"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d87550fb08008610bcd949fe449251fe"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=147590fb090086105183db4d1a9dbe20"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=147590fb090086105183db4d1a9dbe20"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_147590fb090086105183db4d1a9dbe20^sys_idNOT IN907550fb2f008610a8c1336d0247bafe"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>document_id</element>
+        <help/>
+        <hint/>
+        <label>Document Id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_147590fb090086105183db4d1a9dbe20</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_id>907550fb2f008610a8c1336d0247bafe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Id</sys_name>
+        <sys_package display_value="WDocApp" source="x_snc_wdocapp">447550fb7f008610112a32e1fa1d7078</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_147590fb090086105183db4d1a9dbe20_document_id_en</sys_update_name>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_147590fb090086105183db4d1a9dbe20"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_147590fb090086105183db4d1a9dbe20"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_147590fb090086105183db4d1a9dbe20"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>d47590fb2a008610fca3da8c7583f020</sys_id>
+        <latest_snapshot>147590fb090086105183db4d1a9dbe20</latest_snapshot>
+        <compiler_build>glide-washingtondc-12-20-2023__patch0-01-17-2024_01-25-2024_1625.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=d47590fb2a008610fca3da8c7583f020"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=d47590fb2a008610fca3da8c7583f020^sys_idNOT INdc7550fb51008610455c1bc726b341fd"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"dc7550fb51008610455c1bc726b341fd","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="Single Stage Approval">d47590fb2a008610fca3da8c7583f020</plan_id>
+        <snapshot>fbc449f31b4486108c9cc844604bcb86</snapshot>
+        <sys_created_by>sarathy.rambha.snf.us@snc</sys_created_by>
+        <sys_created_on>2024-02-05 21:39:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dc7550fb51008610455c1bc726b341fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="WDocApp">447550fb7f008610112a32e1fa1d7078</sys_scope>
+        <sys_updated_by>sarathy.rambha.snf.us@snc</sys_updated_by>
+        <sys_updated_on>2024-02-05 21:39:03</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>
